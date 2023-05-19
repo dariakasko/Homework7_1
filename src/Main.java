@@ -25,5 +25,7 @@ public class Main {
         System.out.println(circle1.toString());
         System.out.println(triangle1.toString());
         System.out.println(rectangle1.toString());
+
+        System.out.println("I've done it and I'm happy");
     }
 }
