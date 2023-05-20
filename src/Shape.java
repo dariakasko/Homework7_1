@@ -1,4 +1,4 @@
-public class Shape {
+public abstract class Shape {
     protected String color;
     public double calculateArea() {
         return 0;
