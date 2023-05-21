@@ -3,8 +3,6 @@ import java.nio.channels.Pipe;
 public class Circle extends Shape {
 
     Point point1, point2;
-    public Circle() {
-    }
     public Circle(Point point1, Point point2, String color) {
         this.point1 = point1;
         this.point2 = point2;
@@ -23,12 +21,10 @@ public class Circle extends Shape {
     public double calculatePerimeter() {
         return 2 * Math.PI * calculateRadius() ;
     }
-    /*
     @Override
     public String paint() {
         return color;
     }
-     */
     @Override
     public String toString(){
         return "This is Circle: \n" + "Area: " + calculateArea() + "\nPerimeter: " + calculatePerimeter() + "\nColor: " + color + "\n";

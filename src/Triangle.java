@@ -6,8 +6,6 @@ public class Triangle extends Shape{
     private double side1, side2, side3;
     private double trianglePerimeter;
 
-    public Triangle() {
-    }
     public Triangle(Point p1, Point p2, Point p3, String color) {
         point1 = p1;
         point2 = p2;
@@ -32,12 +30,10 @@ public class Triangle extends Shape{
         trianglePerimeter = side1 + side2 + side3;
         return trianglePerimeter;
     }
-
-    /*@Override
+    @Override
     public String paint() {
         return color;
     }
-     */
 
     @Override
     public String toString(){
