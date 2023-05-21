@@ -30,7 +30,7 @@ public class Triangle extends Shape{
         trianglePerimeter = side1 + side2 + side3;
         return trianglePerimeter;
     }
-
+    @Override
     public String paint() {
         return color;
     }
