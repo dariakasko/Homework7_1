@@ -7,9 +7,9 @@ public class Main {
         Point point2 = new Point(10, 10);
         Point point3 = new Point(7, 0);
 
-        Circle circle1 = new Circle(point1, point2, "Green");
-        Triangle triangle1 = new Triangle(point1, point2, point3, "Pink");
-        Rectangle rectangle1 = new Rectangle(point1, point2, point3, "Red");
+        Circle circle1 = new Circle(point1, point2, Colours.GREEN);
+        Triangle triangle1 = new Triangle(point1, point2, point3, Colours.PINK);
+        Rectangle rectangle1 = new Rectangle(point1, point2, point3, Colours.RED);
 
         Shape[] arrayOfShapes = new Shape[3];
         arrayOfShapes[0] = circle1;
@@ -19,13 +19,11 @@ public class Main {
         for (int i = 0; i < arrayOfShapes.length; i++) {
             arrayOfShapes[i].calculatePerimeter();
             arrayOfShapes[i].calculateArea();
-            arrayOfShapes[i].paint();
         }
 
         System.out.println(circle1.toString());
         System.out.println(triangle1.toString());
         System.out.println(rectangle1.toString());
 
-        System.out.println("I've done it and I'm happy");
     }
 }

@@ -1,12 +1,13 @@
 public class Rectangle extends Shape {
     Point p1, p2, p3;
+    Colours colour;
     private double side1, side2;
 
-    public Rectangle(Point p1, Point p2, Point p3, String color) {
+    public Rectangle(Point p1, Point p2, Point p3, Colours colour) {
         this.p1 = p1;
         this.p2 = p2;
         this.p3 = p3;
-        this.color = color;
+        this.colour = colour;
     }
 
     @Override
@@ -22,13 +23,10 @@ public class Rectangle extends Shape {
         return 2 * side1 + 2 * side2;
     }
     @Override
-    public String paint() {
-        return color;
-    }
-
-    @Override
     public String toString(){
-        return "This is Rectangle: \n" + "Area: " + calculateArea() + "\nPerimeter: " + calculatePerimeter() + "\nColor: " + color + "\n";
+        return "This is Rectangle: \n" + "Area: " + String.format("%.2f",calculateArea()) + "cm^2"
+                + "\nPerimeter: " + String.format("%.2f",calculatePerimeter()) + "cm^2"
+                + "\n" + colour.toString() + "\n";
     }
     @Override
     public boolean equals(Object o) {

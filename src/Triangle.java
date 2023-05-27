@@ -2,15 +2,16 @@ public class Triangle extends Shape{
     Point point1;//x1;y1
     Point point2;//x2;y2
     Point point3;//x3;y3
+    Colours colour;
 
     private double side1, side2, side3;
     private double trianglePerimeter;
 
-    public Triangle(Point p1, Point p2, Point p3, String color) {
+    public Triangle(Point p1, Point p2, Point p3, Colours colour) {
         point1 = p1;
         point2 = p2;
         point3 = p3;
-        this.color = color;
+        this.colour = colour;
         side1 = caclSideByCoordinates(point1, point2);
         side2 = caclSideByCoordinates(point2, point3);
         side3 = caclSideByCoordinates(point1, point3);
@@ -31,13 +32,10 @@ public class Triangle extends Shape{
         return trianglePerimeter;
     }
     @Override
-    public String paint() {
-        return color;
-    }
-
-    @Override
     public String toString(){
-        return "This is Triangle: \n" + "Area: " + calculateArea() + "\nPerimeter: " + calculatePerimeter() + "\nColor: " + color + "\n";
+        return "This is Triangle: \n" + "Area: " + String.format("%.2f",calculateArea()) + "cm^2"
+                + "\nPerimeter: " + String.format("%.2f",calculatePerimeter()) + "cm^2"
+                + "\n" + colour.toString() + "\n";
     }
 
     @Override
